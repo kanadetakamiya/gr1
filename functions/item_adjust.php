@@ -1,6 +1,6 @@
 <?php
 
-$filename = basename($_SERVER['HTTP_REFERER']);
+$filename = isset($_SERVER['HTTP_REFERER']) ? basename($_SERVER['HTTP_REFERER']) : 'index.php';
 if (isset($_GET['add'])) {
   $id = (int)$_GET['add'];
   if (isset($products[$id])) {
